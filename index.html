@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRADE LIKE BERLIN</title>
+    <meta name="description" content="Join Our Telegram Channel Now.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #020b08;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 420px;
+            background: linear-gradient(180deg, #051a14 0%, #030d0a 100%);
+            border: 2px solid #00f5a0;
+            border-radius: 36px;
+            padding: 25px 18px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 245, 160, 0.35), inset 0 0 20px rgba(0, 245, 160, 0.15);
+        }
+
+        .sebi-badge {
+            display: inline-block;
+            background-color: rgba(0, 245, 160, 0.1);
+            border: 1px solid rgba(0, 245, 160, 0.4);
+            color: #00f5a0;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-sec {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .profile-box {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #00f5a0;
+            overflow: hidden;
+            box-shadow: 0 0 20px #00f5a0;
+            background-color: #000;
+        }
+
+        .profile-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main-name {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .sub-name {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, #00f5a0, #00d9f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub-desc {
+            font-size: 13.5px;
+            color: #cbd5e1;
+            line-height: 1.5;
+            margin-bottom: 22px;
+            font-weight: 500;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background-color: rgba(6, 32, 24, 0.7);
+            border: 1px solid rgba(0, 245, 160, 0.25);
+            border-radius: 16px;
+            padding: 12px 5px;
+            text-align: center;
+        }
+
+        .stat-card .val {
+            font-size: 17px;
+            font-weight: 800;
+            color: #00f5a0;
+            margin-bottom: 3px;
+        }
+
+        .stat-card .lbl {
+            font-size: 11.5px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .grid-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .grid-card {
+            flex: 1;
+            background-color: rgba(6, 32, 24, 0.7);
+            border: 1px solid rgba(0, 245, 160, 0.25);
+            border-radius: 16px;
+            padding: 14px 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .grid-card span {
+            font-size: 18px;
+        }
+
+        .grid-card p {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .join-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #00f5a0 0%, #00d9f5 100%);
+            color: #030d0a;
+            font-size: 17px;
+            font-weight: 900;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 50px;
+            box-shadow: 0 0 25px rgba(0, 245, 160, 0.4);
+            letter-spacing: 0.5px;
+            transition: transform 0.2s;
+        }
+
+        .join-btn:active {
+            transform: scale(0.98);
+        }
+
+        .disclaimer {
+            margin-top: 16px;
+            font-size: 10.5px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .powered-by {
+            margin-top: 14px;
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        .powered-by a {
+            color: #00f5a0;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .powered-by a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ticker Tape Strip */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: rgba(0, 245, 160, 0.06);
+            border: 1px solid rgba(0, 245, 160, 0.2);
+            border-radius: 12px;
+            padding: 8px 0;
+            margin-bottom: 18px;
+            white-space: nowrap;
+        }
+
+        .ticker-track {
+            display: inline-block;
+            animation: scroll-left 18s linear infinite;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .ticker-track span {
+            margin: 0 14px;
+        }
+
+        .up { color: #00f5a0; }
+        .down { color: #ff6b6b; }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Candlestick Chart Graphic */
+        .chart-box {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 5px;
+            height: 60px;
+            margin-bottom: 18px;
+            padding: 0 10px;
+        }
+
+        .candle {
+            width: 7px;
+            border-radius: 2px;
+        }
+
+        .candle.green { background-color: #00f5a0; }
+        .candle.red { background-color: #ff6b6b; }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+
+        <div class="profile-sec">
+            <div class="profile-box">
+                <img src="profile.jpg" alt="Profile Image">
+            </div>
+        </div>
+
+        <div class="main-name">TRADE</div>
+        <div class="sub-name">LIKE BERLIN</div>
+
+        <div class="sub-desc">
+            Market Analysis &amp; Learning Community •<br>Nifty • Bank Nifty • Options Basics
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="val">10K+</div>
+                <div class="lbl">Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="val">Free</div>
+                <div class="lbl">Content</div>
+            </div>
+            <div class="stat-card">
+                <div class="val">Daily</div>
+                <div class="lbl">Updates</div>
+            </div>
+        </div>
+
+        <div class="grid-row">
+            <div class="grid-card">
+                <span>📈</span>
+                <p>Nifty Calls</p>
+            </div>
+            <div class="grid-card">
+                <span>🏦</span>
+                <p>Bank Nifty</p>
+            </div>
+        </div>
+
+        <div class="grid-row" style="margin-bottom: 25px;">
+            <div class="grid-card">
+                <span>💹</span>
+                <p>Finnifty</p>
+            </div>
+            <div class="grid-card">
+                <span>📊</span>
+                <p>Swing Trades</p>
+            </div>
+        </div>
+
+        <a id="telegramLink" href="https://telegram.me/+57m7B6MVUrozNzM1" class="join-btn">
+            🚀 JOIN TELEGRAM FREE
+        </a>
+
+        <div class="disclaimer">
+            For educational and informational purposes only. Not investment advice.
+            Markets are subject to risk; please consult a SEBI-registered advisor
+            before making any investment decisions.
+        </div>
+
+        <div class="powered-by">
+            Powered by <a href="https://telegram.me/adsrankmedia" target="_blank" rel="noopener">AdRank Media</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
